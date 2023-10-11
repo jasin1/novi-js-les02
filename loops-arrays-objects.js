@@ -16,7 +16,12 @@ const scores = [
 // 66
 // ==========================================
 
-//testing branch
+// -  loop door score array items
+// - zorg ervoor dat elke item de score wordt geprint met console.log
+
+for (let i = 0; i < scores.length; i++) {
+    console.log('De score van '+ scores[i].name + ' is ' + scores[i].score)
+}
 
 
 
@@ -133,3 +138,4 @@ const students = [
 
 
 
+// branch naam is uitwerkingen-loops-js
