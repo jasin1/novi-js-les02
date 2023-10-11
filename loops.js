@@ -11,7 +11,11 @@
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
 
+const ster = '*';
 
+for (let i = 0; i < 6; i++) {
+    console.log(ster.repeat(i));
+}
 
 
 
@@ -25,6 +29,16 @@
 // klaar!
 // ==========================================
 
+const word = 'Klaar!';
+
+for (let i = 0; i < 5; i++) {
+   if(i < 4){
+       console.log('loop....')
+   }else{
+       console.log(word);
+   }
+
+}
 
 
 
@@ -45,7 +59,17 @@
 // >> 9
 // ==========================================
 
+for (let i = 0; i < 9; i++) {
 
+    if(i>2 && i<6){
+        console.log('>' + i);
+    }else if(i>5){
+        console.log('>>'+ i);
+    }else{
+        console.log(i);
+    }
+
+}
 
 
 
@@ -87,5 +111,16 @@
 // etc.
 // ==========================================
 
+for (let i = 1; i < 100; i++) {
+    if(i % 3 === 0){
+        console.log('fizz');
+    }else if(i % 5 === 0){
+        console.log("buzz");
+    }else if(i % 5 === 0 && i % 3 === 0){
+        console.log("fizzbuzz")
+    }else{
+        console.log(i);
+    }
 
+}
 
