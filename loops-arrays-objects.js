@@ -16,8 +16,17 @@ const scores = [
 // 66
 // ==========================================
 
+// -  loop door score array items
 
+console.log('Opdracht 1a');
+console.log("-".repeat(20));
 
+for (let i = 0; i < scores.length; i++) {
+    // - zorg ervoor dat elke item de score wordt geprint met console.log
+    console.log('De score van '+ scores[i].name + ' is ' + scores[i].score)
+}
+console.log("-".repeat(20));
+console.log(" ");
 
 
 // ==========================================
@@ -32,7 +41,25 @@ const scores = [
 // D
 // ==========================================
 
+// loopen door de array
+// testen welke letters passen bij welke cijfers
 
+console.log('Opdracht 1b');
+console.log("-".repeat(20));
+
+for (let i = 0; i < scores.length; i++) {
+    if(scores[i].score < 70){
+        console.log("D");
+    }else if(scores[i].score < 80){
+        console.log("C");
+    }else if(scores[i].score < 90){
+        console.log("B");
+    }else if(scores[i].score < 100){
+        console.log("A");
+    }
+}
+console.log("-".repeat(20));
+console.log(" ");
 
 
 
@@ -49,8 +76,23 @@ const scores = [
 //  ];
 // ==========================================
 
+console.log('Opdracht 1c');
+console.log("-".repeat(20));
 
-
+for (let j = 0; j < scores.length; j++) {
+    if(scores[j].score < 70){
+        scores[j].grade = 'D';
+    } else if(scores[j].score < 80){
+        scores[j].grade = 'C';
+    }else if(scores[j].score < 90){
+        scores[j].grade = 'B';
+    }else if(scores[j].score < 100){
+        scores[j].grade = 'A';
+    }
+}
+console.log(scores);
+console.log("-".repeat(20));
+console.log(" ");
 
 
 // ==========================================
@@ -75,8 +117,18 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+console.log('Opdracht 2');
+console.log("-".repeat(20));
+let eMail = '';
 
+for (let k = 0; k < NOVIEmployees.length; k++) {
+    eMail = NOVIEmployees[k].firstName+'.'+NOVIEmployees[k].lastName+'@novi.nl';
+    NOVIEmployees[k].email = eMail.toLowerCase();
+}
 
+console.log(NOVIEmployees);
+console.log("-".repeat(20));
+console.log(" ");
 
 
 
@@ -131,5 +183,38 @@ const students = [
 // ]
 // ==========================================
 
+// ======StappenPlan======
+//Maak een nieuw array aan voor combi zipCode en neighborhood
+//vergelijk de twee zipcodes key values in de twee arrays
+//wanneer we een match hebben, vervang students neighborhood value met buurt neighborhood value
 
+// ========================
+const neighborhoods =
+    [
+    {zipCode:'3513', neighborhood: 'Pijlsweerd'},
+    {zipCode:'3514', neighborhood: 'Vogelenbuurt'},
+    {zipCode:'3512', neighborhood: 'Binnenstad'},
+    {zipCode:'3531', neighborhood: 'Lombok'},
+    {zipCode:'3572', neighborhood: 'Wittevrouwen'},
+    {zipCode:'3581', neighborhood: 'Oudwijk'},
+    {zipCode: '3583', neighborhood: 'Schildersbuurt'},
+]
+
+for (const student of students){
+    for (const neighborhood of neighborhoods){
+        if(student.zipCode === neighborhood.zipCode){
+            student.neighborhood = neighborhood.neighborhood;
+        }
+    }
+}
+
+console.log(students);
+// Dit opdracht kon ook met een switch of (if elseif) statement gedaan worden, maar wilde een oplossing vinden die in het echt ook zou kunnen werken. Aangezien het aantal studenten kan veranderen, wellicht honderden, vind ik dit een betere oplossing
+// Ik heb wat verder gezocht dan wat in de EdHub staat, dus weer wat geleerd :)
+
+
+
+
+
+// branch naam is uitwerkingen-loops-js
 
